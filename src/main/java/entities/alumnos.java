@@ -99,7 +99,7 @@ public class alumnos {
     public static boolean esMayorDeEdad(int edad) {
         return edad >= 18;
     }
-    public static boolean notaAprobada(double notamedia) {
+    public static boolean notaprobada(double notamedia) {
         return notamedia >= 5.0;
     }
 }

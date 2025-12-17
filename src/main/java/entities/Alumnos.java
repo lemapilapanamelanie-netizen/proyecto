@@ -1,7 +1,7 @@
 package entities;
 //aqui estan los atributos privados
 
-public class alumnos {
+public class Alumnos {
     private  String nombre;
     private String apellido;
     private int edad;
@@ -11,10 +11,10 @@ public class alumnos {
     private String telefono;
     private double notamedia;
  // constructor  vacio
-    public alumnos() {
+    public Alumnos() {
     }
- // constructor con conparametros
-    public alumnos(String nombre, String apellido, int edad, String curso,
+ // constructor con con parametros
+    public Alumnos(String nombre, String apellido, int edad, String curso,
                    String dni, String email,String telefono, double notamedia) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -91,15 +91,12 @@ public class alumnos {
     }
 
     // 2 metodos estaticos
-      public static boolean esMayorDeEdad() {
-          return esMayorDeEdad(0);
-      }
-
-    // 2 metodos estaticos
     public static boolean esMayorDeEdad(int edad) {
         return edad >= 18;
     }
-    public static boolean notaprobada(double notamedia) {
+
+    public static boolean notaAprobada(double notamedia) {
         return notamedia >= 5.0;
     }
+
 }

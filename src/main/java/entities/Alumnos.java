@@ -13,9 +13,9 @@ public class Alumnos {
  // constructor  vacio
     public Alumnos() {
     }
- // constructor con con parametros
+ // constructor con conparametros
     public Alumnos(String nombre, String apellido, int edad, String curso,
-                   String dni, String email,String telefono, double notamedia) {
+                   String dni, String email, String telefono, double notamedia) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -91,12 +91,15 @@ public class Alumnos {
     }
 
     // 2 metodos estaticos
+      public static boolean esMayorDeEdad() {
+          return esMayorDeEdad(0);
+      }
+
+    // 2 metodos estaticos
     public static boolean esMayorDeEdad(int edad) {
         return edad >= 18;
     }
-
     public static boolean notaAprobada(double notamedia) {
         return notamedia >= 5.0;
     }
-
 }

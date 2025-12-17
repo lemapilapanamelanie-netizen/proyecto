@@ -1,102 +1,112 @@
 package entities;
-//aqui estan los atributos privados
 
+/** definición de la clase Alumnos */
 public class Alumnos {
-    private  String nombre;
-    private String apellido;
-    private int edad;
-    private String curso;
-    private String dni;
-    private String email;
-    private String telefono;
-    private double notamedia;
- // constructor  vacio
+    /** atributos de la clase Alumnos */
+    private  String Nombre;
+    private String Apellido;
+    private int Edad;
+    private String Curso;
+    private String Dni;
+    private String Email;
+    private String Telefono;
+    private double Notamedia;
+ /**  constructor vacio */
     public Alumnos() {
     }
- // constructor con conparametros
-    public Alumnos(String nombre, String apellido, int edad, String curso,
-                   String dni, String email, String telefono, double notamedia) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-        this.curso = curso;
-        this.dni = dni;
-        this.email = email;
-        this.telefono = telefono;
-        this.notamedia = notamedia;
+ /** constructor con todos los parametros
+  * @param Nombre nombre del alumno
+  * @param Apellido Apellidos del alumno
+  * @param  Edad edad del alumno
+  * @param Curso curso del alumno
+  * @param Email email del alumno
+  * @param Telefono telefono del alumno
+  * @param Notamedia notamedia del alumno*/
+
+    public Alumnos(String Nombre, String Apellido, int Edad, String Curso,
+                   String Dni, String Email, String Telefono, double Notamedia) {
+        this.Nombre = Nombre;
+        this.Apellido = Apellido;
+        this.Edad = Edad;
+        this.Curso = Curso;
+        this.Dni = Dni;
+        this.Email = Email;
+        this.Telefono = Telefono;
+        this.Notamedia = Notamedia;
     }
- // getters y setters
+
+    /** getter de nombre */
+
     public String getNombre(){
-        return nombre;
+        return Nombre;
     }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+/** setter de nombre */
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
     }
-
+/** getter de apellido */
     public String getApellido() {
-        return apellido;
+        return Apellido;
     }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+/** setter de apellido */
+    public void setApellido(String Apellido) {
+        this.Apellido = Apellido;
     }
-
+/** getter de edad */
     public int getEdad() {
-        return edad;
+        return Edad;
     }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
+/** setter de edad */
+    public void setEdad(int Edad) {
+        this.Edad = Edad;
     }
-
+/** getter de curso */
     public String getCurso() {
-        return curso;
+        return Curso;
     }
-
-    public void setCurso(String curso) {
-        this.curso = curso;
+/** setter de curso */
+    public void setCurso(String Curso) {
+        this.Curso = Curso;
     }
-
+/** getter de dni */
     public String getDni() {
-        return dni;
+        return Dni;
     }
-
-    public void setDni(String dni) {
-        this.dni = dni;
+/** setter de dni */
+    public void setDni(String Dni) {
+        this.Dni = Dni;
     }
-
+/** getter de email */
     public String getEmail() {
-        return email;
+        return Email;
     }
-
-    public void setEmail(String email) {
-        this.email = email;
+/** setter de email */
+    public void setEmail(String Email) {
+        this.Email = Email;
     }
-
+/** getter de telefono */
     public String getTelefono() {
-        return telefono;
+        return Telefono;
     }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+/** setter de telefono */
+    public void setTelefono(String Telefono) {
+        this.Telefono = Telefono;
     }
-
+/** getter de notamedia */
     public double getNotamedia() {
-        return notamedia;
+        return Notamedia;
+    }
+/** setter de notamedia */
+    public void setNotamedia(double Notamedia) {
+        this.Notamedia = Notamedia;
     }
 
-    public void setNotamedia(double notamedia) {
-        this.notamedia = notamedia;
+    /** metodo estatico para comprobar si es mayor de edad */
+    public static boolean esMayorDeEdad(int Edad) {
+        return Edad >= 18;
     }
-
-
-
-    // 2 metodos estaticos
-    public static boolean esMayorDeEdad(int edad) {
-        return edad >= 18;
-    }
-    public static boolean notaAprobada(double notamedia) {
-        return notamedia >= 5.0;
+    /** metodo estatico para comprobar si la nota media es aprobada */
+    public static boolean notaAprobada(double Notamedia) {
+        return Notamedia >= 5.0;
     }
 }

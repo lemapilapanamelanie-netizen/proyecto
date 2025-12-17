@@ -1,9 +1,19 @@
 import entities.Alumnos;
 
 public class Main {
+    /**
+     * Programa principal para probar la clase Alumnos.
+     * Crea dos objetos Alumnos, uno usando el constructor vacío y otro usando el constructor con parámetros.
+     * Muestra los datos de ambos alumnos y verifica si son mayores de edad y si han aprobado.
+     *
+     * @param args Argumentos de línea de comandos (no se utilizan).
+     */
     public static void main(String[] args) {
+        /**crear objeto alumno1 con constructor vacio y usar setters para asignar valores */
         Alumnos alumno1 = new Alumnos();
+        /** metodos estaticos */
         System.out.println("***Alumno 1***");
+        /**asignar valores a alumno1 */
         alumno1.setNombre("Olivia");
         alumno1.setApellido("Perez");
         alumno1.setEdad(20);
@@ -12,6 +22,7 @@ public class Main {
         alumno1.setEmail("olivida.perez@gmail.com");
         alumno1.setTelefono("678912345");
         alumno1.setNotamedia(8.5);
+        /**mostrar datos del alumno1 */
         System.out.println("Nombre: " + alumno1.getNombre());
         System.out.println("Apellido: " + alumno1.getApellido());
         System.out.println("Edad: " + alumno1.getEdad());
@@ -20,13 +31,16 @@ public class Main {
         System.out.println("Email: " + alumno1.getEmail());
         System.out.println("Telefono: " + alumno1.getTelefono());
         System.out.println("Nota Media: " + alumno1.getNotamedia());
+        /**usar metodos estaticos */
         System.out.println("¿Alumno1 mayor de edad? " +
                 Alumnos.esMayorDeEdad(alumno1.getEdad()));
+        /**usar metodos estaticos */
         System.out.println("¿Alumno1 aprobado? " +
                 Alumnos.notaAprobada(alumno1.getNotamedia()));
-      // constructor con todos los parametros
+        /**crear objeto alumno2 con constructor con todos los parametros */
+
         Alumnos alumno2 = new Alumnos("Liam", "Garcia", 22, "1º DAW", "7894561B","liam.garcia@email.com","612345678", 9.0);
-     // metodos estaticos
+     /**mostrar datos del alumno2 */
         System.out.println("***Alumno 2***");
         System.out.println("Nombre: " + alumno2.getNombre());
         System.out.println("Apellido: " + alumno2.getApellido());
@@ -36,7 +50,7 @@ public class Main {
         System.out.println("Email: " + alumno2.getEmail());
         System.out.println("Telefono: " + alumno2.getTelefono());
         System.out.println("Nota Media: " + alumno2.getNotamedia());
-
+        /**usar metodos estaticos */
         System.out.println("¿El Alumno2 es mayor de edad? " +
                 Alumnos.esMayorDeEdad(alumno2.getEdad()));
 

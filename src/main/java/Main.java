@@ -3,6 +3,7 @@ import entities.Alumnos;
 public class Main {
     public static void main(String[] args) {
         Alumnos alumno1 = new Alumnos();
+        System.out.println("***Alumno 1***");
         alumno1.setNombre("Olivia");
         alumno1.setApellido("Perez");
         alumno1.setEdad(20);
@@ -19,9 +20,14 @@ public class Main {
         System.out.println("Email: " + alumno1.getEmail());
         System.out.println("Telefono: " + alumno1.getTelefono());
         System.out.println("Nota Media: " + alumno1.getNotamedia());
+        System.out.println("¿Alumno1 mayor de edad? " +
+                Alumnos.esMayorDeEdad(alumno1.getEdad()));
+        System.out.println("¿Alumno1 aprobado? " +
+                Alumnos.notaAprobada(alumno1.getNotamedia()));
       // constructor con todos los parametros
         Alumnos alumno2 = new Alumnos("Liam", "Garcia", 22, "1º DAW", "7894561B","liam.garcia@email.com","612345678", 9.0);
      // metodos estaticos
+        System.out.println("***Alumno 2***");
         System.out.println("Nombre: " + alumno2.getNombre());
         System.out.println("Apellido: " + alumno2.getApellido());
         System.out.println("Edad: " + alumno2.getEdad());
@@ -31,10 +37,10 @@ public class Main {
         System.out.println("Telefono: " + alumno2.getTelefono());
         System.out.println("Nota Media: " + alumno2.getNotamedia());
 
-        System.out.println("¿Alumno1 mayor de edad? " +
-                Alumnos.esMayorDeEdad(alumno1.getEdad()));
+        System.out.println("¿El Alumno2 es mayor de edad? " +
+                Alumnos.esMayorDeEdad(alumno2.getEdad()));
 
-        System.out.println("¿Alumno1 aprobado? " +
-                Alumnos.notaAprobada(alumno1.getNotamedia()));
+        System.out.println("¿El Alumno2 ha aprobado? " +
+                Alumnos.notaAprobada(alumno2.getNotamedia()));
     }
 }

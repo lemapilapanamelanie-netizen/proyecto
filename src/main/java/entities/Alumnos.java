@@ -90,10 +90,7 @@ public class Alumnos {
         this.notamedia = notamedia;
     }
 
-    // 2 metodos estaticos
-      public static boolean esMayorDeEdad() {
-          return esMayorDeEdad(0);
-      }
+
 
     // 2 metodos estaticos
     public static boolean esMayorDeEdad(int edad) {
